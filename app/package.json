@@ -1,16 +1,20 @@
 {
-  "name": "twitter-search",
+  "name": "NodejsFreshApp",
   "version": "0.0.1",
+  "description": "A nodejs app based on NodeMySqlUpload developed by wffger.",
   "engines": {
-        "node":     "0.8.x"
+        "node":     "0.10.29"
     },
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.3.8",
+    "express": "3.4.7",
     "hogan-express": "*",
-    "request":"*",
-    "mysql": "*"
+    "request": "*",
+    "mysql": "*",
+    "cookie-parser": "*",
+    "body-parser": "*",
+    "express-session": "*"
   }
 }
