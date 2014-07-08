@@ -13,6 +13,10 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 
 // all environments
 var app = express();
+//setup middleware added by wffger
+var cookieParser = require('cookie-parser');
+// var bodyParser = require('body-praser');
+var session = require('express-seesion');
 
 // check if application is being run in cloud environment
 if (process.env.VCAP_SERVICES) {
@@ -43,6 +47,10 @@ app.engine('html', hogan);
 
 app.use(express.favicon(path.join(__dirname, 'public/images/favicon.ico')));
 app.use(express.logger());
+//added by wffger
+app.use(cookieParser(''));
+// app.use(bodyParser());
+app.use(session({secret:''}));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);

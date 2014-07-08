@@ -1,20 +1,21 @@
 {
-  "name": "NodejsFreshApp",
+  "name": "NMSU-APP",
   "version": "0.0.1",
   "description": "A nodejs app based on NodeMySqlUpload developed by wffger.",
-  "engines": {
-        "node":     "0.10.29"
+  "repository": {
+        "type": "git",
+        "url": "https://hub.jazz.net/git/wffger/NMSU-APP"
+   },
+"engines": {
+        "node":     "0.8.x"
     },
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.4.7",
+    "express": "3.3.8",
     "hogan-express": "*",
-    "request": "*",
-    "mysql": "*",
-    "cookie-parser": "*",
-    "body-parser": "*",
-    "express-session": "*"
+    "request":"*",
+    "mysql": "*"
   }
 }
